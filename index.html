@@ -3,249 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>GameHub</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0b0714;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      background-color: rgba(11,7,20,0.9);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      width: 60px;
-      height: 60px;
-    }
-
-    .logo-text {
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-item {
-      position: relative;
-    }
-
-    .nav-item > button {
-      background: white;
-      color: black;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      padding: 8px 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .nav-item > button:hover {
-      background: #d3d3d3;
-    }
-
-    .arrow {
-      font-size: 12px;
-      transition: transform 0.3s;
-    }
-
-    .arrow.open {
-      transform: rotate(180deg);
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 45px;
-      left: 0;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      min-width: 150px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      z-index: 100;
-    }
-
-    .dropdown a {
-      display: block;
-      color: black;
-      text-decoration: none;
-      padding: 10px 15px;
-      transition: 0.2s;
-    }
-
-    .dropdown a:hover {
-      background: #ececec;
-    }
-
-    .dropdown.show {
-      display: block;
-    }
-
-    .auth {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: black;
-      padding: 8px 16px;
-      border-radius: 10px;
-    }
-
-    .auth button {
-      border: none;
-      border-radius: 8px;
-      padding: 6px 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .auth .login,
-    .auth .signup {
-      background: white;
-      color: black;
-    }
-
-    .auth .login:hover, .auth .signup:hover {
-      background: #d3d3d3;
-    }
-
-    .lang {
-      position: relative;
-    }
-
-    .lang-btn {
-      background: transparent;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .lang-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 35px;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      z-index: 100;
-    }
-
-    .lang-menu a {
-      display: block;
-      color: black;
-      text-decoration: none;
-      padding: 10px 15px;
-    }
-
-    .lang-menu a:hover {
-      background: #ececec;
-    }
-
-    .lang-menu.show {
-      display: block;
-    }
-
-    /* Головний блок */
-    .hero {
-      width: 100%;
-      height: 100vh;
-      background-image: url('IMG_4867-2048x1363.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: 72px;
-      font-weight: 800;
-      color: #fff;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-    }
-
-    .book-btn {
-      background: #3d00ff;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 18px 40px;
-      font-size: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 6px 0 #ff00aa;
-      transition: all 0.3s ease;
-    }
-
-    .book-btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 15px rgba(255,0,170,0.4);
-    }
-
-    .book-btn span {
-      margin-left: 10px;
-      font-weight: 800;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="GameHub-Logo.png" alt="GameHub Logo">
-      <div class="logo-text">
+       <img src="images/Group1.png" alt="Healthy breakfast" class="recipe-image">
         <div>Game</div>
         <div>Hub</div>
       </div>
@@ -266,7 +29,7 @@
     </nav>
 
     <div class="auth">
-      <img src="7d323502-3778-4e8e-81ce-54eb833ac08b.png" alt="icon" width="24">
+      <img src="images/Group1.png" alt="Логотип черовний" class="recipe-image" width="24">
       <span>Авторизація</span>
       <button class="login">Увійти</button>
       <button class="signup">Створити акаунт</button>
@@ -280,12 +43,13 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to GameHub</h1>
-      <button class="book-btn">ЗАБРОНЮВАТИ МІСЦЕ <span>→</span></button>
-    </div>
-  </section>
+<section class="hero">
+  <img src="images/image 3.jpg" alt="фонове зображення компютерного клубу" class="hero-image">
+  <div class="hero-content">
+    <h1>Welcome to GameHub</h1>
+    <button class="book-btn">ЗАБРОНЮВАТИ МІСЦЕ <span>→</span></button>
+  </div>
+</section>
 
   <script>
     const servicesBtn = document.getElementById('servicesBtn');
