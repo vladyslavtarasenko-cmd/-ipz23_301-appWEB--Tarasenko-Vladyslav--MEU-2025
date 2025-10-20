@@ -19,88 +19,91 @@ body {
       z-index: 10;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .logo a {
+  text-decoration: none; /* Прибираємо підкреслення */
+  color: #fff; /* Білий або який хочеш колір */
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Відстань між Game і Hub */
+  font-family: "Jersey 20", sans-serif; /* Твій шрифт */
+  font-size: 42px;
+  font-weight: 700;
+  transition: transform 0.2s ease, color 0.3s ease;
 
-    .logo img {
-      width: 60px;
-      height: 60px;
-    }
+}
 
-    .logo-text {
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1;
-    }
+.logo a:hover {
+  transform: scale(1.05); /* Трохи збільшується при наведенні */
+  color: #ff0040; /* Наприклад, червоний відтінок при наведенні */
+}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
+.logo img {
+  height: 40px; /* або твій розмір */
+  width: auto;
+}
 
-    .nav-item {
-      position: relative;
-    }
+ .nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-    .nav-item > button {
-      background: white;
-      color: black;
-      font-weight: 600;
-      border: none;
-      border-radius: 10px;
-      padding: 8px 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
+.nav-item {
+  position: relative;
+}
 
-    .nav-item > button:hover {
-      background: #d3d3d3;
-    }
+.nav button,
+.nav a.nav-link {
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
 
-    .arrow {
-      font-size: 12px;
-      transition: transform 0.3s;
-    }
+.nav button:hover,
+.nav a.nav-link:hover {
+  background: #e6e6e6;
+  transform: translateY(-1px);
+}
 
-    .arrow.open {
-      transform: rotate(180deg);
-    }
+/* Стрілочка ▼ */
+.arrow {
+  font-size: 12px;
+}
 
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 45px;
-      left: 0;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      min-width: 150px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      z-index: 100;
-    }
+/* Dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .dropdown a {
-      display: block;
-      color: black;
-      text-decoration: none;
-      padding: 10px 15px;
-      transition: 0.2s;
-    }
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+}
 
-    .dropdown a:hover {
-      background: #ececec;
-    }
+.dropdown a:hover {
+  background: #f1f1f1;
+}
 
-    .dropdown.show {
-      display: block;
-    }
+/* Показ випадаючого меню */
+.nav-item:hover .dropdown {
+  display: block;
+}
+
 
     .auth {
       display: flex;
@@ -202,11 +205,11 @@ body {
     }
 
     .hero h1 {
-      font-size: 72px;
+      font-size: 67px;
       font-weight: 800;
-      color: #fff;
-      text-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      margin-bottom: 30px;
+      color: #e01010;
+      text-shadow:   2px 3px rgb(223, 14, 136);
+      margin-bottom: 20px;
       letter-spacing: 2px;
     }
 
@@ -264,8 +267,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  text-align: center;
+  text-align: left;
   color: white;
+ 
 
 }
 
@@ -283,4 +287,199 @@ body {
 
 .book-btn:hover {
   background: #ff0000;
+}
+
+
+\\
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("image.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1000px;
+  left: 450px ;
+  z-index: 2;
+}
+
+.title {
+  font-size: 132px;
+  font-weight: bold;
+  color: #e00707;
+  text-shadow: 2px 2px 5px rgb(219, 11, 11);
+  margin-bottom: 10px;
+  font-family:"Jersey 20", sans-serif;
+}
+
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.contact {
+  position: absolute;
+  bottom: 10px;
+  left: 1450px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #00d9ff;
+}
+
+
+\\
+
+
+
+.game-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 72px;
+  color: #6a04f0;
+  text-shadow: 0 0 15px #843cf8, 0 0 30px #1014cf;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+
+.games-section {
+  margin-top: -100px;
+  text-align: center;
+  padding: 40px;
+  color: #000000;
+}
+
+.games-title {
+  font-size: 100px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: white;
+}
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.games-grid img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.games-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,0,100,0.4);
+}
+
+.games-extra {
+  margin-top: -380px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: 1560px;
+  margin-right: 0px;
+}
+
+.games-extra p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #eb0a86;
+}
+
+.games-extra ul {
+  list-style: none;
+  padding: 0;
+   color: #ffffff;
+}
+
+.games-extra li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======== СИНЯЯ БЕГУЩАЯ ПОЛОСА ======== */
+.marquee-container {
+  position: relative;
+  width: 100vw;              /* от края до края экрана */
+  background-color: #0059ff; /* синий фон */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+  margin: 0;                 /* убираем отступы */
+}
+
+/* ======== ТЕКСТОВАЯ ЛЕНТА ======== */
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollRight 20s linear infinite; /* скорость и направление */
+}
+
+.marquee span {
+  display: inline-block;
+  margin: 0 80px;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ======== АНИМАЦИЯ: справа налево ======== */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
