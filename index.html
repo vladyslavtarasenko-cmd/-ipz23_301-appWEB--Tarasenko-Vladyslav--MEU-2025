@@ -2,87 +2,160 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>GameHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberZone — Комп'ютерний клуб</title>
+  <!-- Підключення CSS стилів -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-  <!-- ЛОГОТИП -->
+
+  <!-- Header (шапка сайту з логотипом та навігацією) -->
+<header>
   <div class="logo">
-  <a href="index.html">
-    <img src="images/Group1.png" alt="Логотип- красный" class="recipe-image">
-    <div>Game</div>
-    <div>Hub</div>
-  </a>
-</div>
-
-    <nav class="nav">
-      <div class="nav-item">
-        <button id="servicesBtn">Послуги <span class="arrow">▼</span></button>
-        <div class="dropdown" id="servicesDropdown">
-          <a href="#">Гейм зони</a>
-          <a href="#">Бар</a>
-          <a href="#">Копі-центр</a>
-        </div>
-      </div>
-      <div class="nav-item"><a href="games.html"><button>Ігри</button></a></div>
-      <div class="nav-item"><button>Новини</button></div>
-      <div class="nav-item"><button>Контакти</button></div>
-    </nav>
-
-    <div class="auth">
-      <img src="images/Group1.png" alt="Логотип черовний" class="recipe-image" width="24">
-      <span>Авторизація</span>
-      <button class="login">Увійти</button>
-      <button class="signup">Створити акаунт</button>
-      <div class="lang">
-        <button class="lang-btn" id="langBtn">UA <span class="arrow">▼</span></button>
-        <div class="lang-menu" id="langMenu">
-          <a href="#">EN</a>
-          <a href="#">RU</a>
-        </div>
-      </div>
-    </div>
-   
-  </header>
-
-<section class="hero">
-  <img src="images/image 3.jpg" alt="фонове зображення компютерного клубу" class="hero-image">
-  <div class="hero-content">
-    <h1>Welcome to GameHub</h1>
-    <button class="book-btn">ЗАБРОНЮВАТИ МІСЦЕ <span>→</span></button>
+    <!-- Логотип, клік по якому оновлює сторінку -->
+    <a href="index.html">CyberZone</a>
   </div>
+  <nav>
+    <!-- Навігаційне меню -->
+    <ul>
+      <li><a href="#home">Головна</a></li>
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero Section (великий блок-привітання на весь екран) -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Ласкаво просимо до <span>CyberZone</span></h1>
+      <p>Твоя зона комфорту, ігор та перемог. Сучасні ПК, топове обладнання та дружня атмосфера!</p>
+      <!-- Кнопка для бронювання -->
+      <a href="#" class="btn" id="bookBtn">Забронювати місце</a>
+    </div>
+  </section>
+
+  <!-- About Section (секція "Про нас") -->
+  <section id="about" class="about">
+  <h2>Про нас</h2>
+  <p>
+    <strong>CyberZone</strong> — це більше, ніж просто комп’ютерний клуб.  
+    Це місце, де технології, змагання та драйв поєднуються у справжній світ кіберспорту.  
+    Ми створили простір, у якому кожен геймер, стрімер чи фанат ігор може знайти свою зону комфорту,  
+    релаксу і, головне — перемоги.  
+  </p>
+
+  <p>
+    Наш клуб оснащено лише найновішим обладнанням:  
+    <strong>RTX 4070 / i7 процесори, 240Hz монітори, механічні клавіатури та ігрові крісла преміум класу</strong>.  
+    Кожен ПК проходить регулярне оновлення, щоб ти отримував максимальний FPS, стабільність і якість зображення.
+  </p>
+
+  <p>
+    Ми подбали і про атмосферу — неонове освітлення, сучасний дизайн, зручні зони відпочинку та бар  
+    із напоями для геймерів. Усе це створює унікальний настрій, який заряджає енергією та бажанням грати ще.
+  </p>
+
+  <p>
+    В CyberZone ти можеш:
+    <ul>
+      <li>💥 Змагатися на локальних та онлайн-турнірах з CS2, Valorant, Dota 2, Apex Legends та ін.</li>
+      <li>🎮 Відчути VR-досвід у нашій <strong>віртуальній зоні</strong> — від жахів до гоночних симуляторів.</li>
+      <li>🤝 Грати з друзями у кооперативі або знайомитися з новими однодумцями-геймерами.</li>
+      <li>☕ Відпочити між матчами в лаундж-зоні з кавою, снеками та музикою.</li>
+    </ul>
+  </p>
+
+  <p>
+    Ми віримо, що ігри — це не просто розвага, це <strong>культура, стиль життя і шлях до розвитку</strong>.  
+    Саме тому ми постійно вдосконалюємо наш клуб, проводимо турніри, оновлюємо техніку і підтримуємо  
+    геймерську спільноту України.
+  </p>
+
+  <p>
+    Приходь до <strong>CyberZone</strong> — відчуй справжню силу кіберспорту.  
+    Тут починаються нові перемоги 💪
+  </p>
 </section>
 
-  <script>
-    const servicesBtn = document.getElementById('servicesBtn');
-    const servicesDropdown = document.getElementById('servicesDropdown');
-    const servicesArrow = servicesBtn.querySelector('.arrow');
+  <!-- Services Section (секція "Послуги") -->
+  <section id="services" class="services">
+    <h2>Наші послуги</h2>
+    <div class="service-list">
+      <!-- Окремий блок послуги -->
+      <div class="service">
+        <h3>Ігрові місця</h3>
+        <p>RTX 4070 / i7 / 240Hz монітори — ідеально для будь-яких ігор.</p>
+      </div>
+      <div class="service">
+        <h3>Турніри</h3>
+        <p>Регулярні турніри з CS2, Valorant, Dota 2 та інших ігор.</p>
+      </div>
+      <div class="service">
+        <h3>VR-зона</h3>
+        <p>Поринь у світ віртуальної реальності з сучасними шоломами VR.</p>
+      </div>
+    </div>
+  </section>
 
-    servicesBtn.addEventListener('click', () => {
-      servicesDropdown.classList.toggle('show');
-      servicesArrow.classList.toggle('open');
-    });
+  <!-- Gallery Section (секція "Галерея") -->
+  <section id="gallery" class="gallery">
+    <h2>Галерея</h2>
+    <p>Поглянь на наш клуб, атмосферу та геймерське життя CyberZone!</p>
+    <div class="gallery-grid">
+      <!-- Окремі фото галереї -->
+      <img src="https://images.unsplash.com/photo-1636036704268-017faa3b6557?auto=format&fit=crop&w=800&q=80" alt="Ігрові станції">
+      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Геймери за ПК">
+      <img src="https://images.unsplash.com/flagged/photo-1563192395-7412e5fe58a7?auto=format&fit=crop&w=800&q=80" alt="VR Зона">
+      <img src="https://images.unsplash.com/photo-1598550487031-0898b4852123?auto=format&fit=crop&w=800&q=80" alt="Кібертурнір">
+      <img src="https://images.unsplash.com/photo-1636036824578-d0d300a4effb?auto=format&fit=crop&w=800&q=80" alt="Ігрові комп’ютери">
+      <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80" alt="Інтер’єр клубу">
+    </div>
+  </section>
 
-    const langBtn = document.getElementById('langBtn');
-    const langMenu = document.getElementById('langMenu');
-    const langArrow = langBtn.querySelector('.arrow');
+  <!-- Contact Section (секція "Контакти") -->
+  <section id="contact" class="contact">
+    <h2>Контакти</h2>
+    <p>📍 м. Київ, вул. Геймерська 7</p>
+    <p>📞 +380 (99) 123-45-67</p>
+    <p>📧 info@cyberzone.ua</p>
+  </section>
 
-    langBtn.addEventListener('click', () => {
-      langMenu.classList.toggle('show');
-      langArrow.classList.toggle('open');
-    });
+  <!-- Booking Popup (вікно бронювання) -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup">&times;</span>
+      <h2>Бронювання місця</h2>
+      <form id="bookingForm">
+        <label>Ваше ім’я:</label>
+        <input type="text" id="name" required>
 
-    document.addEventListener('click', (e) => {
-      if (!servicesBtn.contains(e.target) && !servicesDropdown.contains(e.target)) {
-        servicesDropdown.classList.remove('show');
-        servicesArrow.classList.remove('open');
-      }
-      if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
-        langMenu.classList.remove('show');
-        langArrow.classList.remove('open');
-      }
-    });
-  </script>
+        <label>Дата:</label>
+        <input type="date" id="date" required>
+
+        <label>Час:</label>
+        <input type="time" id="time" required>
+
+        <button type="submit" class="btn">Забронювати</button>
+      </form>
+      <p id="successMessage" style="display:none; color:#00ffcc; margin-top:15px;">✅ Місце заброньовано!</p>
+    </div>
+  </div>
+
+  <!-- Lightbox (галерея у повний екран) -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Footer (нижній колонтитул) -->
+  <footer>
+    <p>© 2025 CyberZone. Усі права захищено.</p>
+  </footer>
+
+  <!-- Підключення JS скриптів -->
+  <script src="script.js"></script>
 </body>
 </html>
